@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Anonymous Function
+        let arr1=[1,2,3,4,5]
+        let roatate=function(arr,k){
+            for(let i=0;i<k;i++)
+            { var temp=arr[0];
+                for(let j=0;j<arr.length-1;j++)
+                {
+                    arr[j]=arr[j+1];
+                }
+                arr[arr.length-1]=temp;
+            }
+            return arr;
+        }
+        console.log(roatate(arr1,2))
+        let arr2=[1,2,3,4,5]
+        //Ifee Function
+        let iffe_dup= (function(arr,k){
+            for(let i=0;i<k;i++)
+            { var temp=arr[0];
+                for(let j=0;j<arr.length-1;j++)
+                {
+                    arr[j]=arr[j+1];
+                }
+                arr[arr.length-1]=temp;
+            }
+            return arr;
+        })(arr2,2)
+       console.log(iffe_dup)
+    </script>
+</body>
+</html>
